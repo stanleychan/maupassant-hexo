@@ -50,13 +50,14 @@ html(lang='#{config.language}')
         each item in theme.widgets
           != partial('_widget/' + item + '.jade')
 
-    #footer= '© '
-      a(href=url_for('.'), rel='nofollow')= config.title + '.'
-      |  Powered by
-      a(rel='nofollow', target='_blank', href='https://hexo.io')  Hexo.
-      a(rel='nofollow', target='_blank', href='https://github.com/tufu9441/maupassant-hexo')  Theme
-      |  by
-      a(rel='nofollow', target='_blank', href='https://github.com/pagecho')  Cho.
+    #footer= '©' + config.copyright + ' '
+      a(href=url_for('.'), rel='nofollow')= config.title + '. '
+      a(href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action", rel='nofollow', target='_blank')= config.roll_num
+    //  |  Powered by
+    //  a(rel='nofollow', target='_blank', href='https://hexo.io')  Hexo.
+    //  a(rel='nofollow', target='_blank', href='https://github.com/tufu9441/maupassant-hexo')  Theme
+    //  |  by
+    //  a(rel='nofollow', target='_blank', href='https://github.com/pagecho')  Cho.
 
     include _partial/totop
     include _partial/after_footer
