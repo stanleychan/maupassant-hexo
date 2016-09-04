@@ -39,6 +39,7 @@ baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 show_category_count: false ## If you want to show the count of categories in the sidebar widget please set the value to true.
 shareto: true ## If you want to use the share button please set the value to true.
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
+widgets_on_small_screens: false ## Set to true to enable widgets on small screens.
 
 menu:
   - page: home
@@ -97,10 +98,11 @@ version: 0.0.0
 - self_search - A jQuery-based [local search engine](http://hahack.com/codes/local-search-engine-for-hexo), with the dependency on the plugin [hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search).
 - google_analytics - [Google Analytics](https://www.google.com/analytics/) tracking id
 - baidu_analytics - [Baidu Analytics](http://tongji.baidu.com) tracking id
-- show_category_count - Show the count of categories in the sidebar widget
+- show_category_count - Show the count of categories in the sidebar widget.
 - shareto - Enable share button
 - busuanzi - Enable [Busuanzi](http://busuanzi.ibruce.info) page views
-- menu - Customize your menu of pages here, just follow the format of existied items. Don't forget to create corresponding folders inlcuding `index.md` in `source` folder to ensure the pages will correctly display. [FontAwesome](http://fontawesome.io) icon fonts have been integrated, and you can choose other icons you like [here](http://fontawesome.io/icons/) and use them according to the instruction.
+- widgets_on_small_screens - Show the widgets at the bottom of small screens.
+- menu - Customize your menu of pages here, just follow the format of existied items. Don't forget to create corresponding folders inlcuding `index.md` in `source` folder to ensure the pages will correctly display. [FontAwesome](http://fontawesome.io) icon fonts have been integrated, and you can choose other icons which you like [here](http://fontawesome.io/icons/) and use them according to the instruction.
 - widgets - Choose and arrange the widgets in sidebar here.
 - links - Edit your blogroll here.
 - timeline - Show a timeline of the website by setting `layout: timeline` of a page.
@@ -115,6 +117,9 @@ You can add a website logo for apple devices, please put an image named **apple-
 
 #### Abstract
 You can control the abstract of a post shown at index, by either filling a `description:` item in `front-matter` of the `post.md`, or just inserting a `<!--more-->` before your hidden content.
+
+#### Page
+Create folders inlcuding `index.md` in `source` folder to add pages, and add a `layout: page` in `front-matter` of `index.md`. If you need a single column page without sidebar, just set `layout: single-column` instead of `layout: page`.
 
 #### Table of Contents
 TOC in a post can be enabled by adding a `toc: true` item in `front-matter`.
